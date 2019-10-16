@@ -301,7 +301,7 @@ end
 -------------------------------------------------------------------
 
 function inspect.inspect(root, options)
-  options       = options or {}
+  options       = type(options) == 'table' and options or {}
 
   local depth   = options.depth   or math.huge
   local newline = options.newline or '\n'
